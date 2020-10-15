@@ -4,11 +4,11 @@
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig. Forked from duffman/tspath",
   "scripts": {
     "build": "tsc",
-    "tspath": "node ./dist/src/tspath.js"
+    "tspath": "node ./dist/tspath.js"
   },
   "preferGlobal": true,
   "bin": {
-    "tspath": "./dist/src/tspath.js"
+    "tspath": "./dist/tspath.js"
   },
   "keywords": [
     "relative",

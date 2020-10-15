@@ -23,9 +23,10 @@
 
 =----------------------------------------------------------------= */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParserEngine = void 0;
 let fs = require("fs");
 let path = require('path');
-let esprima = require("esprima");
+let espree = require("espree");
 let escodegen = require("escodegen");
 let chalk = require("chalk");
 const utils_1 = require("./utils");
@@ -181,7 +182,7 @@ class ParserEngine {
         let inputSourceCode = fs.readFileSync(filename, type_definitions_2.FILE_ENCODING);
         let ast = null;
         try {
-            ast = esprima.parse(inputSourceCode); //, { raw: true, tokens: true, range: true, comment: true });
+            ast = espree.parse(inputSourceCode, { ecmaVersion: 2018 });
         }
         catch (error) {
             console.log("Unable to parse file:", filename);
@@ -291,7 +292,7 @@ class ParserEngine {
             }
             else {
                 let tmpExt = path.extname(file);
-                if ((fileExtension.length > 0 && scope.matchExtension(fileExtension))
+                if ((fileExtension.length > 0 && scope.matchExtension(tmpExt))
                     || (fileExtension.length < 1)
                     || (fileExtension == "*.*")) {
                     let fullFilename = path.join(dir, file);
