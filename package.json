@@ -1,15 +1,14 @@
 {
-  "name": "tspath",
-  "version": "2.0.0",
-  "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
+  "name": "@invisible/tspath",
+  "version": "2.0.1",
+  "description": "TypeScript Path Igniter resolves @paths specified in tsconfig. Forked from duffman/tspath",
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register test/**.*/test.ts",
     "tspath": "node ./dist/src/tspath.js"
   },
   "preferGlobal": true,
   "bin": {
-    "tspath": "./dist/tspath.js"
+    "tspath": "./dist/src/tspath.js"
   },
   "keywords": [
     "relative",
@@ -19,25 +18,18 @@
     "resolve",
     "alias"
   ],
-  "author": "Patrik Forsberg <patrik.forsberg@coldmind.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/duffman/tspath.git"
-  },
-  "license": "LGPL-2",
+  "repository": "git@github.com:invisible-tech/tspath.git",
+  "author": "Invisible Technologies Inc. <engineering@invisible.email>",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
-    "@types/node": "^8.0.25",
-    "chalk": "^2.3.0",
-    "escodegen": "^1.8.1",
-    "esprima": "^4.0.0",
-    "prompt-confirm": "^1.2.0",
-    "typescript": "^2.4.2",
-    "yargs": "^11.0.0"
+    "@types/node": "^14.11.8",
+    "chalk": "^4.1.0",
+    "escodegen": "^2.0.0",
+    "espree": "^7.3.0",
+    "prompt-confirm": "^2.0.4",
+    "typescript": "^4.0.3",
+    "yargs": "^16.0.3"
   },
-  "devDependencies": {
-    "@types/chai": "^4.0.4",
-    "@types/mocha": "^2.2.42",
-    "chai": "^4.1.2",
-    "mocha": "^3.5.0"
-  }
+  "devDependencies": {}
 }
