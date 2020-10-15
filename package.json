@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "tspath": "./dist/tspath.js"
+    "tspath": "dist/tspath.js"
   },
   "keywords": [
     "relative",
@@ -18,10 +18,12 @@
     "resolve",
     "alias"
   ],
-  "repository": "git@github.com:invisible-tech/tspath.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/invisible-tech/tspath.git"
+  },
   "author": "Invisible Technologies Inc. <engineering@invisible.email>",
   "license": "UNLICENSED",
-  "private": true,
   "dependencies": {
     "@types/node": "^14.11.8",
     "chalk": "^4.1.0",
@@ -31,5 +33,9 @@
     "typescript": "^4.0.3",
     "yargs": "^16.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/invisible-tech/tspath/issues"
+  },
+  "homepage": "https://github.com/invisible-tech/tspath#readme",
 }
